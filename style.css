@@ -1,9 +1,64 @@
-* {
-    margin: 0px;
-    padding: 0px;
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-
-img {
+ 
+img{
     width: 100%;
+}
+ 
+footer{
+    background-color: rgb(153, 175, 252);
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+ 
+main{
+    align-content: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+ 
+header{
+    background-color: rgb(153, 175, 252);
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+ 
+#overskrift, h1{
+    color: rgb(3, 3, 201);
+    text-align: center;
+    font-size: 50px;
+}
+ 
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 3px;
+    max-width: 900px;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+ 
+article{
+    background-color: bisque;
+    grid-column: span 3;
+ 
+}
+ 
+article.stor{
+    grid-column: span 6;
+ 
+}
+ 
+article.xlarge{
+    grid-column: span 12;
 }
