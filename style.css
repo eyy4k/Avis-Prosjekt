@@ -1,64 +1,691 @@
-*{
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bytesized&display=swap');
+
+:root {
+    --main-color: #8EB1C7
+}
+
+/* minimal css reset */
+
+* {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
- 
-img{
+
+body {
+    font-family: 'Newsreader', 'Roboto Flex', Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+}
+
+img {
     width: 100%;
 }
- 
-footer{
-    background-color: rgb(153, 175, 252);
-    width: 100%;
-    height: 50px;
+
+/* Navbar Kode :) */
+
+nav {
+    display: flex;
+    justify-content: flex-end;
     position: fixed;
-    left: 0;
-    bottom: 0;
-}
- 
-main{
-    align-content: center;
-    justify-content: center;
-    margin-top: 50px;
-}
- 
-header{
-    background-color: rgb(153, 175, 252);
     width: 100%;
-    height: 50px;
-    position: fixed;
-    left: 0;
     top: 0;
+    z-index: 0;
+    height: 60px;
+    align-items: center;
 }
- 
-#overskrift, h1{
-    color: rgb(3, 3, 201);
-    text-align: center;
-    font-size: 50px;
+
+
+nav {
+    background-color: #d53131;
 }
- 
-.container{
+
+nav a,
+nav button{
+    background-color: inherit;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 15px;
+    border: none;
+    font-family: 'Roboto Flex', 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.input {
+    height: 40px;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #8EB1C7;
+    border-radius: 8px; 
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    outline: none; 
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.input::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+.navn{
+    color: white;
+    margin: 5px;
+    font-family: 'Roboto Flex', 'Roboto', Arial, Helvetica, sans-serif ; 
+    font-size: 20px;
+}
+.fa-user {
+    color: white !important;
+}
+
+.bildeforside {
+    width: 100% !important;
+}
+
+.logoSkrift{
+        font-family: "Bytesized", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 40px;
+        padding: auto;
+        margin-right: auto;
+        margin-top: 5px;
+      }
+      
+
+
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #B10F2E;
+    padding: 8px;
+    min-width: 160px;
+    z-index: 1;
+
+}
+
+.dropdown-content a {
+    font-size: 15px;
+    padding: 5px;
+    color: white;
+}
+
+.kontakt {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.kontakt li {
+    background: #d53131;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.fa-caret-down.rotate {
+    transform: rotate(360deg);
+    transition: transform 1s ease;
+}
+
+/* Artikkel Format */
+
+.master {
+    max-width: 900px;
+    margin-top: 75px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 3px;
-    max-width: 900px;
-    text-align: center;
-    justify-content: center;
-    margin: auto;
+    gap: 14px;
+    margin-left: auto;
+    margin-right: auto;
 }
- 
-article{
-    background-color: bisque;
+
+.master>article {
+    background-color: rgb(254, 254, 254);
     grid-column: span 3;
- 
+    min-height: 150px;
 }
- 
-article.stor{
+
+article.small {
+    grid-column: span 1;
+}
+
+article.medium {
+    grid-column: span 3;
+}
+
+article.large {
     grid-column: span 6;
- 
 }
- 
-article.xlarge{
+
+article.x-large {
+    grid-column: span 9;
+}
+
+article.xx-large {
     grid-column: span 12;
+}
+
+
+.nyhettext {
+    font-size: 3.2rem;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    padding-bottom: 10px;
+}
+
+.master2 {
+    margin-top: 20px;
+}
+
+.nyhettext a {
+    color: black;
+    text-decoration: none;
+
+
+}
+
+.nyhettext a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/* Baisc Artikkel Layout */
+
+.Artikkellayout {
+    width: 75%;
+    min-width: 75%;
+    max-width: 90%;
+    margin: 80px auto 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/*  Sjenerelt Text og Bilde Artikkel Layout */
+
+.xx-large.nyhettext img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+
+}
+
+.p1 {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    margin: 15px 20px 0px 20px;
+    padding: 10px;
+}
+
+.head1 {
+    font-size: 2rem;
+    margin: 20px 0px 0px 0px;
+    padding: 10px;
+    line-height: 1.7;
+}
+
+.head2{
+    font-size: 1.2rem;
+    padding: 10px;
+    line-height: 1.7;
+}
+
+/* Footer */
+
+.footer1 {
+    font-size: 1rem;
+    background-color: #d53131;
+    height: 60px;
+    padding: 20px 0;
+    text-align: center
+    
+}
+
+.footer1>p {
+    color: white;
+    text-decoration: none;
+}
+
+/* Kode for Kilde */
+
+.kildehead {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* artikkel Airbus */
+
+#airbusArtikkel>img {
+    max-width: 50rem;
+    padding: 0;
+}
+
+.p4 {
+    line-height: 1.5;
+    font-size: 2.7rem;
+}
+
+/* Quantum Computing */
+
+a.kilder {
+    text-decoration: underline !important;
+}
+
+/* Mark og Meta KI */
+
+.nyhettext.medium {
+    font-size: 2.9rem; 
+    line-height: 1.1;
+}
+
+/* BYD Lynlader og Artikkel ChatGPT */
+
+#chatimg {
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.p2 {line-height: 1.2;}
+
+/* Slag Medsin */
+
+.p3 {
+    line-height: 1.5;
+    font-size: 3rem;
+}
+
+/* Kjørende Artikkel */
+
+#kjørende {height: 600px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;}
+
+/* Gemini Artikkel */
+
+#gemimg {height: 150px;}
+
+#p5 {line-height: 1.2;}
+
+/* Tips oss */
+
+#TipsBoks{
+    margin-bottom: 8%;
+}
+
+/* Trivia */
+.triviaBody {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(254, 254, 254);
+    padding: 30px;
+
+} 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --light-purple-color: #d53131;
+    --light-color: #fff;
+    --dark-color: #000;
+    --grey-color: #f2f2f2;
+    --transition: all 300ms ease-in-out;
+}
+.poengsum{
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    border: 5px solid rgb(254, 254, 254);
+    font-weight: bold;
+    width: 100px;
+    height: 50px;
+    margin: .5rem auto 1rem auto;
+    color: var(--light-purple-color);
+}
+#trivia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -20px auto -20px auto;
+
+}
+
+#triviaQ {
+    font-size: 1.7rem;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+.triviaOptions .category{
+    font-size: 0.9rem;
+    font-weight: 500;
+    background-color: var(--light-purple-color);
+    color: var(--light-color);
+    padding: .2rem .4rem;
+    border-radius: .2rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+.triviaOptions{
+    list-style-type: none;
+    margin: 1rem 0;
+}
+.triviaOptions li{
+    border-radius: 0.5rem;
+    font-weight: 600;
+    margin: .7rem 0;
+    padding: .4rem 1.2rem;
+    cursor: pointer;
+    border: 3px solid var(--light-purple-color);
+    background-color: var(--light-purple-color);
+    color: var(--light-color);
+    box-shadow: 0 4px 0 0 #d32d2d;
+    transition: var(--transition);;
+}
+.triviaOptions li:hover{
+    background-color: var(--grey-color);
+    color: var(--dark-color);
+    border-color: var(--grey-color);
+    box-shadow: 0 4px 0 0 #bbbbbb;
+}
+.triviaOptions li:active{
+    transform: scale(0.97);
+}
+/* js related */
+.selected{
+    background-color: var(--grey-color)!important;
+    color: var(--dark-color)!important;
+    border-color: var(--grey-color)!important;
+    box-shadow: 0 4px 0 0 #bbbbbb!important;
+}
+.triviaButtons button{
+    border: none;
+    border-radius: 0.5rem;
+    outline: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: .5rem 1rem;    
+    margin: 0 auto 0 auto;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: block;
+    background-color: var(--grey-color);
+    color: var(--dark-color);
+    letter-spacing: 2px;
+    transition: var(--transition);
+    box-shadow: 0 4px 0 0 #bbbbbb;
+}
+.triviaButtons button:hover{
+    background-color: #e6e6e6;
+    box-shadow: 0 4px 0 0 #a7a7a7;
+}
+.triviaButtons button:active{
+    transform: scale(0.95);
+}
+#playAgain{
+    display: none;
+}
+#results {
+    padding: .7rem 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+#results i{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    background-color: var(--light-purple-color);
+    color: var(--light-color);
+}
+
+#trivia {
+    max-width: 80%;
+}
+
+/* Media query for 800px  */
+
+@media (max-width: 800px) {
+    .master {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .master>article {
+        grid-column: span 12;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #gemimg {
+        height: auto;
+    }
+    nav {
+        justify-content: space-between; 
+        padding: 0 10px;
+    }
+
+    .logoSkrift {
+        font-size: 6vw;
+    }
+
+    .input {
+        width: 150px;
+    }
+    #trivia {
+        max-width: 100%;
+    }
+    #triviaQ {
+        width: 100%;
+    }
+}
+
+
+
+/* Media Query 700px */
+
+@media (max-width: 700px) {
+
+    .master>article a {
+        font-size: 2.2rem;
+    }
+}
+
+
+
+@media (max-width: 600px){
+   
+    
+    
+    
+}
+
+@media (max-width: 600px){
+    .input{
+        width: 100px;
+    }
+}
+
+/* Media Query 500px */
+
+@media (max-width: 500px) {
+
+    .master>article a {
+        font-size: 1.6rem;
+    }
+    .input{
+        width: 70px;
+    }
+}
+
+@media (max-width: 460px){
+    .input{
+        display: none;
+    }
+    
+}
+
+
+
+@media (max-width: 333px){
+    .logoSkrift{
+        font-size: 20px;
+    }
+    .dropbtn{
+        font-size: 20px;
+    }
+
+        #triviaQ {
+            font-size: 1.4rem;
+            padding: 0px;
+        }
+        }
+
+@media (max-width: 320px){
+    .navn{
+        display: none;
+    }
+}
+
+@media (max-width: 242px){
+    .logoSkrift{
+        font-size: 15px;
+    }
+    .dropbtn{
+        font-size: 10px;
+    }
+}
+
+/* Media query for 230px */
+
+@media (max-width: 230px) {
+
+    .master>article a {
+        font-size: 1.2rem;
+    }
+
+}
+
+
+/* Media query 700px Individuelle Artikkler  */
+
+@media (max-width: 700px) {
+    .Artikkellayout {
+        width: 90%;
+        margin-top: 100px;
+        padding: 20px;
+
+    }
+
+    .nyhettext {
+        font-size: 2.8rem;
+    }
+
+    .p1 {
+        font-size: 1.2rem;
+    }
+
+    .head1 {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* Media query 500px Individuelle Artikkler  */
+
+@media (max-width: 500px) {
+    .Artikkellayout {
+        padding: 15px;
+    }
+
+    .nyhettext {
+        font-size: 2rem;
+    }
+
+    .p1 {
+        font-size: 1rem;
+    }
+
+    .head1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Media query 400px Individuelle Artikkler  */
+
+@media (max-width: 400px) {
+    .Artikkellayout {
+        padding: 10px;
+
+    }
+
+    .nyhettext {
+        font-size: 1.6rem;
+    }
+
+    .p1 {
+        font-size: 0.9rem;
+    }
+
+    .head1 {
+        font-size: 1.3rem;
+    }
+
+    .xx-large.nyhettext img {
+        width: 80%;
+    }
+}
+
+/* Media query 300px Individuelle Artikkler */
+
+@media (max-width: 300px) {
+    .Artikkellayout {
+        padding: 5px;
+    }
+
+    .nyhettext {
+        font-size: 1.4rem;
+    }
+
+    .p1 {
+        font-size: 0.8rem;
+    }
+
+    .head1 {
+        font-size: 1.2rem;
+    }
 }
