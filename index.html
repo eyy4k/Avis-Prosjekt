@@ -1,51 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min Avis</title>
- 
+    <title>Artikkel Rød</title>
     <link rel="stylesheet" href="style.css">
- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="icon" type="image/png" href="bilder/favicon.png">
+
 </head>
- 
+
 <body>
- 
-    <header class="hode">
-        <h1 id="overskrift">Velkommen til min avis</h1>
+    <header>
+        <nav>
+            <div class="logoSkrift"><a href="index.html" class="logoSkrift">Kode Rød</a></div>
+            <input class="input" type="text" placeholder="Skriv inn brukernavnet ditt">
+            <i class="hode fa-solid fa-user"></i>
+            <p class="navn">Gjest</p>
+            <div class="dropdown">
+                <button class="dropbtn">Meny
+                    <i class="fa-solid fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="tipsoss.html">Tips Oss</a>
+                    <a href="omoss.html">Om KodeRød</a>
+                </div>
+            </div>
+        </nav>
     </header>
- 
-    <main class="hoved">
-       
-        <div class="container">
-            <article>
-                artikkel 1
+    <main>
+        <div class="master">
+            <article class="xx-large nyhettext">
+                <a href="quantum_computing.html"><img src="bilder/chip.png" class="bildeforside"
+                        alt="Bildet av chipen til microsoft">
+                    Microsofts Kvantegjennombrudd: Er Dette Slutten for Vanlige Datamaskiner?</a>
             </article>
- 
-            <article class="stor">
-                artikkel 2
+            <article class="x-large nyhettext"><a href="artikkelChatGpt.html"> <img src="bilder/bilde1.webp" alt=""> 7
+                    ting som er nødvendig å kunne i 2025 for å bruke ChatGPT som
+                    en proff!</a></article>
+            <article class="nyhettext medium"><a href="MetaKI.html"><img id="markimg" src="bilder/mark.webp"
+                        alt="">Facebook-eier Meta lanserer KI-tjeneste
+                    i Europa</a></article>
+            <article class="large nyhettext"><a href="artikkelAirbus.html"><img src="bilder/airbusPicture.png"
+                        alt="">Airbus teknologisk infrastruktur fond for bedre teknologi i EU</a></article>
+            <article class="large nyhettext"><a href="nvidiaAi-Brikke.html"> <img src="bilder/nvidia.jpeg" alt="">
+                    Nvidia ventet å avsløre detaljer om siste AI-brikke på konferansen</a></article>
+
+
+        </div>
+
+        <div class="triviaBody">
+            <div class="poengsum">
+                <span id="riktige"></span>/<span id="antallQ"></span>
+            </div>
+            <div class="triviaQBody">
+                <div id="trivia">
+                    <h2 id="triviaQ"></h2>
+                </div>
+                <ul class="triviaOptions">
+                    <!-- <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li> -->
+                </ul>
+                <div id="results"></div>
+            </div>
+            <div class="triviaButtons">
+                <button type="button" id="checkAnswer">Sjekk svar</button>
+                <button type="button" id="playAgain">Spill igjen</button>
+            </div>
+        </div>
+
+
+        <div class="master2 master">
+            <article class="nyhettext xx-large"><a href="chatAi.html"> <img src="bilder/Chat-AI.jpg"
+                        class="bildeforside"> AI Chatbots kan være et enkelt bytte for "Zero-Knowledge" hackere </a>
             </article>
- 
-            <article>
-                artikkel 3
+
+            <article class="large nyhettext">
+                <a href="slagmedsin.html"><img src="bilder/stroke.png" alt="bilde">Revolusjonerende Slagmedisin: Nytt
+                    Legemiddel Kan Redde Hjernen Din – Forskere i Sjokk!</a>
             </article>
- 
-            <article class="xlarge">
-                <img src="bilder/katten.jpeg" alt="">
-                dette er en katt
+            <article class="nyhettext large"><a href="BYDlynlader.html"><img src="bilder/BYD lynlader.png"
+                        alt="">Kinesiske BYD sier ny lynlader er like rask som å fylle bensin</a></article>
+            <article class="x-large nyhettext"><a href="selvKjørendeTur.html"><img src="bilder/selvKjørendeBiler.jpeg"
+                        alt="">Alphabets Waymo tar sikte på lansering av selvkjørende tur i Washington, D.C. i 2026</a>
+            </article>
+            <article class="medium nyhettext" id="p5"><a href="geminiartikkel.html"><img id="gemimg"
+                        src="bilder/gemini.avif" alt="">Googles Gemini kan nå se alt du gjør på skjermen din</a>
             </article>
         </div>
     </main>
- 
-    <footer class="fot"></footer>
- 
-    <script src="script.js"></script>
-</body>
- 
-</html>
- 
 
+    <footer class="footer1">
+        <p>&copy; 2025 #ITERKULT | KODE RØD</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="trivia.js"></script>
+</body>
+
+</html>
  
  
  
