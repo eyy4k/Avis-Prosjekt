@@ -14,8 +14,6 @@ A front-end newspaper-style website built with HTML and CSS. This project focuse
 - CSS
 - Javascript
 
-## 📂 How to Use
+## 🌐 Live Demo
+Check out the live demo: [Avis-Prosjekt Live](https://eyy4k.github.io/Avis-Prosjekt/)
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/
